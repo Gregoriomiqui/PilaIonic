@@ -1,13 +1,14 @@
 <ion-header>
     <ion-navbar>
       <ion-title>
-        Elemento
+        Página {{ numeroPag }}
       </ion-title>
     </ion-navbar>
   </ion-header>
   
   <ion-content padding>
-   Soy la otra pagina
-   <button ion-button (click)='volver()'>Volver</button>
+    <button ion-button full  (click)='agregarPagina()'>Agregar Página</button>
+    <button ion-button full color="danger" (click)='volver()'>Remover Pagina</button>
+   
   </ion-content>
   

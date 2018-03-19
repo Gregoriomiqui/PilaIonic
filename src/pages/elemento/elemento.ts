@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 
 @Component({
@@ -7,10 +7,20 @@ import { NavController } from 'ionic-angular';
     templateUrl:'elemento.html'
 })
 export class ElementoPage{
-    constructor(public navCtrl: NavController) { }
+    numeroPag:number;
+
+    constructor(public navCtrl: NavController, public navParams:NavParams) {
+        
+        this.numeroPag=navParams.get('numero');
+     }
     volver(){ 
         //volvemos a la anterior pagina
         this.navCtrl.pop();
     }
+
+    agregarPagina(){
+        this.navCtrl.push(ElementoPage, { numero: this.numeroPag + 1 } );
+      }
+
     
 }
