@@ -7,8 +7,11 @@
   </ion-header>
   
   <ion-content padding>
-    <button ion-button full  (click)='agregarPagina()'>Agregar Página</button>
-    <button ion-button full color="danger" (click)='volver()'>Remover Pagina</button>
-   
+    <button ion-button full  [navPush]="elementoPage" [navParams]="{ numero: numeroPag + 1 }">
+      Agregar Página
+    </button>
+    <button ion-button full color="danger" navPop>
+      Remover Pagina
+    </button>
   </ion-content>
   

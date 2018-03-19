@@ -8,9 +8,14 @@ import { ElementoPage } from '../elemento/elemento'
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) { }
+  /*constructor(public navCtrl: NavController) { }
 
   agregarPagina(){
     this.navCtrl.push(ElementoPage, { numero:1 });
-  }
+  }*/
+
+
+  //forma corta de navegar
+ elementoPage=ElementoPage;
+
 }
