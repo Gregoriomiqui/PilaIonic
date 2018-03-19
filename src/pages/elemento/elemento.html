@@ -9,9 +9,14 @@
   <ion-content padding>
     <button ion-button full  [navPush]="elementoPage" [navParams]="{ numero: numeroPag + 1 }">
       Agregar Página
-    </button>
-    <button ion-button full color="danger" navPop>
+    </button> 
+   <button ion-button full color="danger" navPop>
       Remover Pagina
     </button>
+<hr>
+<button ion-button full [navPush]="testPage" >
+  ir a test
+</button>
+
   </ion-content>
   
